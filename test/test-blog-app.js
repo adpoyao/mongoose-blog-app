@@ -44,7 +44,7 @@ describe('Blog-App API resource', function() {
   });
 
   beforeEach(function() {
-    return tearDownDb()
+    tearDownDb()
       .then(function(){ 
         return seedBlogData();
       });
