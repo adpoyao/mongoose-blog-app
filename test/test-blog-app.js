@@ -55,7 +55,6 @@ describe('Blog-App API resource', function() {
     return closeServer();
   });
 
-
   describe('GET endpoint', function() {
     it('should return all existing blog posts', function() {
       // strategy:
