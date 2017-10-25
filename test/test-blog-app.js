@@ -44,14 +44,11 @@ describe('Blog-App API resource', function() {
   });
 
   beforeEach(function() {
-    tearDownDb()
-      .then(function(){ 
-        return seedBlogData();
-      });
+    return seedBlogData();
   });
 
   afterEach(function() {
-    // return tearDownDb();
+    return tearDownDb();
   });
 
   after(function() {
