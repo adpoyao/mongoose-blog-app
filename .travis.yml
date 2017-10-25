@@ -2,3 +2,10 @@ language: node_js
 node_js: node
 services:
 - mongodb
+deploy: eddie-blog-app
+  provider: heroku
+  api_key:
+    secure: mlatg+blKaXVZXJAgt7+XN/VcQgfYXt6OXPufBiNNyhSJZsI9OhvwrkLtxu2Jf8GMM8zj51/UWn0MUQDCU7ord5WZDAFCyxaUfDG8Oi8afFIBxjjCTyPZNO4EP/K4RdQh6PspjyHBewP7Bd2Tu0CTelqilxjlUsrj0CgKjbWkThfo4882WXjeBKgg9eOf9k8UrHj8f09kzP+ftpfIs0RwgMTiReUeGJcXOzCS/y6ac2x1acmJh2MTUH2A6YTFN/PkV2Z+Bl6J1Zd0Gie4yrQMpvST/kCAa8ERI0X+rK/xgQIdvuYxfO/OQh8akNc22caIp3OKCUY0H4rPB0ebX54UEgR7DZ65OkIVuQdWi3rHSkkvimMNwQ3cIBbwkYcKB0jYWgkB5/mcv2GU4hNxGff2j0q1YTKN6HHRYkpzBCfzCaOlSsPYJoFOkW71DcsFbaWLTLCeIpX/hM7m8sDCm49UbmDZ6i+pGw5zFFVuYcJl1SMlIwD3sN7LDQ2BpVgpTIo/HC3itCKSr/j8BGe80nUzj+TvE6dutAq4Tzgji+2kYkb6lYZpK3VRamLa+XjwVy8NX+fNKIf864U5yvU+/5GrnViIV64sVYtPHBxKilXf3inGjIKo89nmJ46b4z4XHJ9Vn8oaLqlckYw67/BedKfesSesr/DetrRHihQRT4zwfo=
+  app: secure-lowlands-29850
+  on:
+    repo: adpoyao/mongoose-blog-app
