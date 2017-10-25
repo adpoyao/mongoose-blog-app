@@ -53,14 +53,10 @@ app.post('/blogs', (req, res) => {
   }
 
   const {title, author, content} = req.body;
-  const {firstName, lastName} = req.body.author;
   Blog 
     .create({
       title,
-      author: {
-        firstName,
-        lastName
-      },
+      author,
       content
     })
     .then(blog => {
@@ -80,7 +76,6 @@ app.put('/blogs/:id', (req, res) => {
     res.status(400).json({message: message});
   }
   
-  const {id, title, author, content} = req.body;
   const toUpdate = {};
   const updateableFields = ['title', 'author', 'content'];
   
