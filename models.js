@@ -14,10 +14,10 @@ const blogSchema = mongoose.Schema({
 
 blogSchema.virtual('fullName').get(function() {
   return `${this.author.firstName} ${this.author.lastName}`;
-}).set(function(str) {
-  const [first, last] = str.split(' ');
-  this.author.firstName = first;
-  this.author.lastName = last;
+// }).set(function(str) {
+//   const [first, last] = str.split(' ');
+//   this.author.firstName2 = first;
+//   this.author.lastName2 = last;
 });
 
 blogSchema.methods.apiRepr = function() {

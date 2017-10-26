@@ -44,11 +44,14 @@ describe('Blog-App API resource', function() {
   });
 
   beforeEach(function() {
-    return seedBlogData();
+    return tearDownDb()
+      .then(() => {
+        return seedBlogData();
+      });
   });
 
   afterEach(function() {
-    return tearDownDb();
+    // return tearDownDb();
   });
 
   after(function() {
@@ -100,7 +103,12 @@ describe('Blog-App API resource', function() {
         .then(function(blog) { 
           resBlog.id.should.equal(blog.id);
           resBlog.title.should.equal(blog.title);
-          resBlog.author.should.equal(blog.fullName);          
+          resBlog.author.should.equal(blog.fullName);
+          // let test = blog.fullName;
+          // blog.fullName = test;
+          // console.log('===blog.author.firstName2', blog.author.firstName2);
+          // console.log('===blog.author.lastName2', blog.author.lastName2);     
+          // console.log('===blog.author', blog.author);   
           resBlog.created.should.equal(blog.created.toISOString());
         });
     });
